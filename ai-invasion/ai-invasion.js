@@ -187,10 +187,12 @@ const timerMechanism = () => {
       timer.textContent = '';
       if (playerScore <= 0) {
         keepDiscardButtonArea.innerHTML = `<div></div><div><br>GAME<br>OVER</div>`;
+        gameBoard.innerHTML = '';
         gameBoard.style.backgroundImage =
           'url(https://media.giphy.com/media/X3nnss8PAj5aU/giphy.gif)';
       } else {
         keepDiscardButtonArea.innerHTML = `<div></div><div><br>WELL<br>DONE!</div>`;
+        gameBoard.innerHTML = '';
         gameBoard.style.backgroundImage =
           'url(https://media.giphy.com/media/VGVwLultLZjrrssAak/giphy.gif)';
       }
