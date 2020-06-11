@@ -126,12 +126,11 @@ const addItemsToGameBoard = (newWord) => {
 };
 
 const getButtons = (event) => {
-  currentWord = event.target;
-  currentWord.style.display = 'none';
-  console.log(currentWord);
-  if (event.target == event.currentTarget) {
-    keepDiscardButtonArea.innerHTML = '';
-  } else {
+  if (event.target != event.currentTarget) {
+    currentWord = event.target;
+    currentWord.style.display = 'none';
+    console.log(currentWord);
+
     console.log(event);
     keepDiscardButtonArea.innerHTML = `<button type='button' value='${event.target.attributes[0].value}' color='blue' class='${event.target.innerText}' id="discard" data-is-real='${event.target.attributes[2].value}'>DISCARD ${event.target.innerText}</button><div>${event.target.attributes[1].value}</div><button type='button' value='${event.target.attributes[0].value}' color='blue' class='${event.target.innerText}' id="keep" data-is-real='${event.target.attributes[2].value}'>KEEP ${event.target.innerText}</input>`;
   }
