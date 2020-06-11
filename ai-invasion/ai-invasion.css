@@ -71,7 +71,7 @@ main section span {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  padding: 0 5% 0 5%;
+  padding: 0 5%;
   color: #ff7300;
   -webkit-transition: all 5s ease 5s;
   transition: all 5s ease 5s;
@@ -123,5 +123,11 @@ input {
 button:focus,
 input:focus {
   outline: none;
+}
+
+@media screen and (max-width: 1080px) {
+  main {
+    height: 72vh;
+  }
 }
 /*# sourceMappingURL=ai-invasion.css.map */

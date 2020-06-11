@@ -52,7 +52,7 @@ main {
       position: absolute;
       width: max-content;
       height: max-content;
-      padding: 0 5% 0 5%;
+      padding: 0 5%;
       color: rgb(255, 115, 0);
       transition: all 5s ease 5s;
       font-size: unset;
@@ -94,5 +94,11 @@ input {
 
   &:focus {
     outline: none;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  main {
+    height: 72vh;
   }
 }
