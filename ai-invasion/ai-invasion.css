@@ -6,7 +6,7 @@
 }
 
 html {
-  background-color: gray;
+  background-color: whitesmoke;
 }
 
 header {
@@ -103,7 +103,7 @@ footer div {
           justify-content: center;
   height: 100%;
   width: 100%;
-  background-color: inhert;
+  background-color: inherit;
   font-size: 5vmin;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: whitesmoke;
