@@ -91,12 +91,6 @@ const playGame = () => {
 
 /*----------- GLOBAL FUNCTIONS ----------*/
 
-const toTitleCase = (str) => {
-  return str.replace(/\w\S*/g, function (txt) {
-    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-  });
-};
-
 // Play and reset button  //
 const toggleReset = () => {
   if (gameReset === true) {
