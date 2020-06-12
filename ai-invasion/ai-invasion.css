@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'calculator-font';
+  src: url("./calculator-font.woff2") format("woff2"), url("./calculator-font.woff") format("woff"), url("./calculator-font.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Text animations for flashing neon lights */
 * {
   padding: 0;
   margin: 0;
@@ -6,14 +14,7 @@
 }
 
 html {
-  background-color: whitesmoke;
-  height: 100vh;
-  width: 100vw;
-}
-
-body {
-  height: 100%;
-  width: 100%;
+  background-color: #0b0014;
 }
 
 header {
@@ -24,8 +25,21 @@ header {
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
   background-color: #0b0014;
-  height: 15%;
-  width: 100%;
+  height: 15vh;
+  width: 100vw;
+  font-family: Orbitron;
+}
+
+header #discard {
+  background-color: red;
+  -webkit-animation: flash 0.125s 2;
+          animation: flash 0.125s 2;
+}
+
+header #keep {
+  background-color: yellowgreen;
+  -webkit-animation: flash 0.125s 2;
+          animation: flash 0.125s 2;
 }
 
 header div {
@@ -35,13 +49,63 @@ header div {
   width: 100%;
   background-color: inhert;
   font-size: 3vmin;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: whitesmoke;
 }
 
 main {
-  height: 77%;
-  width: 100%;
+  height: 77vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #timer {
+  font-family: calculator-font;
+  color: yellowgreen;
+  font-size: 4vmin;
+}
+
+main section {
+  text-align: center;
+  position: relative;
+  height: 90%;
+  width: 90%;
+  border: 1px #0b0014 solid;
+  background-color: #0b0014;
+  font-size: 7vmin;
+}
+
+main section span {
+  font-family: sans-serif;
+  position: absolute;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  font-size: unset;
+  border-radius: 3em;
+  -webkit-animation: blink 3.5s infinite;
+          animation: blink 3.5s infinite;
+}
+
+.jumbotron {
+  position: fixed;
+  top: 5%;
+  left: 0;
+  height: 75vh;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -55,35 +119,31 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-main section {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-align: center;
-  position: relative;
-  height: 90%;
-  width: 90%;
-  border: 1px #0b0014 solid;
-  background-color: whitesmoke;
-  font-size: 7vmin;
 }
 
-main section span {
-  font-family: sans-serif;
-  position: absolute;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
+.jumbotron #logo {
+  height: 30%;
+  width: 40%;
+  background-image: url(https://media.giphy.com/media/10tkf2u5HFDGWk/giphy.gif);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 15px 0;
+}
+
+.jumbotron h2 {
+  font-size: 8vmin;
+  font-family: calculator-font;
+  color: red;
+}
+
+.jumbotron .instructions {
+  font-family: 'Orbitron';
+  font-size: 3vmin;
   padding: 0 5%;
-  color: #ff7300;
-  -webkit-transition: all 5s ease 5s;
-  transition: all 5s ease 5s;
-  font-size: unset;
-  background-color: #0b001499;
+  color: whitesmoke;
+  line-height: 2.5em;
 }
 
 footer {
@@ -94,7 +154,7 @@ footer {
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
   background-color: #0b0014;
-  height: 8%;
+  height: 8vh;
   width: 100vw;
 }
 
@@ -112,19 +172,22 @@ footer div {
   width: 100%;
   background-color: inherit;
   font-size: 5vmin;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: calculator-font;
   color: whitesmoke;
 }
 
 footer div#player-score {
   font-size: 6vmin;
+  text-shadow: 0px 0px 50px red;
 }
 
 button,
 input {
-  font-size: 4.4vmin;
+  font-size: 3vmin;
   border: 0;
   border-radius: 0;
+  font-family: orbitron;
+  border-radius: 2em;
 }
 
 button:focus,
@@ -133,8 +196,248 @@ input:focus {
 }
 
 @media screen and (max-width: 1080px) {
-  html {
-    height: 90vh;
+  main {
+    height: 67vh;
+  }
+}
+
+@-webkit-keyframes blink {
+  0% {
+    color: transparent;
+  }
+  10% {
+    color: fuchsia;
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+  }
+  20% {
+    color: transparent;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+  }
+  30% {
+    color: #cf0;
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+  }
+  40% {
+    color: transparent;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+  }
+  50% {
+    color: red;
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+  }
+  60% {
+    color: transparent;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+  }
+  70% {
+    color: #ff8d03;
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+  }
+  80% {
+    color: transparent;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+  }
+  90% {
+    color: white;
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+  }
+  100% {
+    color: transparent;
+  }
+}
+
+@keyframes blink {
+  0% {
+    color: transparent;
+  }
+  10% {
+    color: fuchsia;
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+  }
+  20% {
+    color: transparent;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+  }
+  30% {
+    color: #cf0;
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+  }
+  40% {
+    color: transparent;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+  }
+  50% {
+    color: red;
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+  }
+  60% {
+    color: transparent;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+  }
+  70% {
+    color: #ff8d03;
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+  }
+  80% {
+    color: transparent;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+  }
+  90% {
+    color: white;
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+  }
+  100% {
+    color: transparent;
+  }
+}
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0%;
+  }
+  5% {
+    opacity: 10%;
+  }
+  10% {
+    opacity: 20%;
+  }
+  15% {
+    opacity: 30%;
+  }
+  20% {
+    opacity: 40%;
+  }
+  25% {
+    opacity: 50%;
+  }
+  30% {
+    opacity: 60%;
+  }
+  35% {
+    opacity: 70%;
+  }
+  40% {
+    opacity: 80%;
+  }
+  45% {
+    opacity: 90%;
+  }
+  50% {
+    opacity: 100%;
+  }
+  55% {
+    opacity: 90%;
+  }
+  60% {
+    opacity: 80%;
+  }
+  65% {
+    opacity: 70%;
+  }
+  70% {
+    opacity: 60%;
+  }
+  75% {
+    opacity: 50%;
+  }
+  80% {
+    opacity: 40%;
+  }
+  85% {
+    opacity: 30%;
+  }
+  90% {
+    opacity: 20%;
+  }
+  95% {
+    opacity: 10%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0%;
+  }
+  5% {
+    opacity: 10%;
+  }
+  10% {
+    opacity: 20%;
+  }
+  15% {
+    opacity: 30%;
+  }
+  20% {
+    opacity: 40%;
+  }
+  25% {
+    opacity: 50%;
+  }
+  30% {
+    opacity: 60%;
+  }
+  35% {
+    opacity: 70%;
+  }
+  40% {
+    opacity: 80%;
+  }
+  45% {
+    opacity: 90%;
+  }
+  50% {
+    opacity: 100%;
+  }
+  55% {
+    opacity: 90%;
+  }
+  60% {
+    opacity: 80%;
+  }
+  65% {
+    opacity: 70%;
+  }
+  70% {
+    opacity: 60%;
+  }
+  75% {
+    opacity: 50%;
+  }
+  80% {
+    opacity: 40%;
+  }
+  85% {
+    opacity: 30%;
+  }
+  90% {
+    opacity: 20%;
+  }
+  95% {
+    opacity: 10%;
+  }
+  100% {
+    opacity: 0%;
   }
 }
 /*# sourceMappingURL=ai-invasion.css.map */

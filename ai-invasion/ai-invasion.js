@@ -26,7 +26,7 @@ console.log('AI Invasion v0.1');
 /*----------- GLOBAL VARIABLES INITIALIZATION ----------*/
 let gameReset = true;
 let playerScore = 0;
-let currentWord;
+let currentWord = null;
 // let scoreOne = 0;
 // let scoreTwo = 0;
 // let scoreThree = 0;
@@ -39,6 +39,7 @@ const resetToggleButton = document.querySelector('#reset-toggle-button');
 const gameBoard = document.querySelector('.game-board');
 const keepDiscardButtonArea = document.querySelector('header');
 const scoreBoard = document.querySelector('#player-score');
+const jumbotron = document.querySelector('.jumbotron');
 
 /*-----------------------------------------*/
 /*-----------                    ----------*/
@@ -84,12 +85,17 @@ const playGame = () => {
   for (let i = 1; i <= coreGameAssets.length; i++) {
     const newWordObject = newGameWordsArray.shift();
     newGameWordsArray.push(newWordObject);
-    setTimeout(addItemsToGameBoard, 5000 * i, newWordObject);
+    setTimeout(addItemsToGameBoard, 3500 * i, newWordObject);
   }
   console.log(newGameWordsArray);
 };
 
 /*----------- GLOBAL FUNCTIONS ----------*/
+
+const playAudio = (audioSource) => {
+  let audio = new Audio(audioSource);
+  audio.play();
+};
 
 // Play and reset button  //
 const toggleReset = () => {
@@ -97,7 +103,11 @@ const toggleReset = () => {
     gameReset = false;
     console.log('Game started.');
     resetToggleButton.setAttribute('value', 'RESTART');
+    jumbotron.style.display = 'none';
     gameBoard.style.border = 'none';
+    keepDiscardButtonArea.innerHTML = '';
+    timer.innerHTML = '01:10';
+    playAudio('./anthem.mp3');
     gameBoard.style.backgroundImage =
       'url(https://media.giphy.com/media/l0MYGWqxQUdCONvTq/giphy.gif)';
     gameBoard.style.backgroundSize = 'contain';
@@ -117,6 +127,7 @@ const toggleReset = () => {
 
 const addItemsToGameBoard = (newWord) => {
   gameBoard.innerHTML += newWord.renderWord;
+  playAudio();
 };
 
 const getButtons = (event) => {
@@ -124,7 +135,6 @@ const getButtons = (event) => {
     currentWord = event.target;
     currentWord.style.display = 'none';
     console.log(currentWord);
-
     console.log(event);
     keepDiscardButtonArea.innerHTML = `<button type='button' value='${event.target.attributes[0].value}' color='blue' class='${event.target.innerText}' id="discard" data-is-real='${event.target.attributes[2].value}'>DISCARD ${event.target.innerText}</button><div>${event.target.attributes[1].value}</div><button type='button' value='${event.target.attributes[0].value}' color='blue' class='${event.target.innerText}' id="keep" data-is-real='${event.target.attributes[2].value}'>KEEP ${event.target.innerText}</input>`;
   }
@@ -147,12 +157,14 @@ const playerScoreEvent = (event) => {
     ) {
       console.log('CORRECT');
       gameBoard.style.backgroundImage =
-        'url(https://media.giphy.com/media/WUsOgqfcpOBRlJPrUM/giphy.gif)';
+        'url(https://media.giphy.com/media/26tknCqiJrBQG6bxC/giphy.gif)';
+      playAudio('./congrats.mp3');
       playerScore += thisScore;
     } else {
       console.log('INCORRECT');
       gameBoard.style.backgroundImage =
         'url(https://media.giphy.com/media/hPPx8yk3Bmqys/giphy.gif)';
+      playAudio('./i-dont-think-so.mp3');
       playerScore -= thisScore;
     }
     scoreBoard.innerHTML = playerScore;
@@ -167,7 +179,7 @@ const playerScoreEvent = (event) => {
 
 const timerMechanism = () => {
   let timer = document.querySelector('#timer');
-  let timeRemaining = 60 * 1.75,
+  let timeRemaining = 60 * 1.1825,
     minutes,
     seconds;
   setInterval(function () {
@@ -176,18 +188,30 @@ const timerMechanism = () => {
     minutes = minutes < 10 ? '0' + minutes : minutes;
     seconds = seconds < 10 ? '0' + seconds : seconds;
     timer.textContent = minutes + ':' + seconds;
+    if (timeRemaining < 60) {
+      timer.style.color = 'orange';
+    }
+    if (timeRemaining < 30) {
+      timer.style.color = 'red';
+    }
+    if (timeRemaining < 10) {
+      timer.style.animation = 'flash 0.5s infinite';
+    }
+    if (timeRemaining < 5) {
+      timer.style.animation = 'flash 0.125s infinite';
+    }
     if (--timeRemaining < 0) {
       timer.textContent = '';
-      if (playerScore <= 0) {
-        keepDiscardButtonArea.innerHTML = `<div></div><div><br>GAME<br>OVER</div>`;
+      if (playerScore <= 35) {
+        keepDiscardButtonArea.innerHTML = `<div></div><div><br>GAME OVER.<br>YOU LOSE!<br><br>35 points needed to win.<br><br>Try again?</div>`;
         gameBoard.innerHTML = '';
         gameBoard.style.backgroundImage =
-          'url(https://media.giphy.com/media/X3nnss8PAj5aU/giphy.gif)';
+          'url(https://media.giphy.com/media/l49JFunqyrbTPSfIY/giphy.gif)';
       } else {
-        keepDiscardButtonArea.innerHTML = `<div></div><div><br>WELL<br>DONE!</div>`;
+        keepDiscardButtonArea.innerHTML = `<div></div><div><br><br>WELL DONE!<br>YOU WIN!</div>`;
         gameBoard.innerHTML = '';
         gameBoard.style.backgroundImage =
-          'url(https://media.giphy.com/media/VGVwLultLZjrrssAak/giphy.gif)';
+          'url(https://media.giphy.com/media/OlSUgQk2sIlTW/giphy.gif)';
       }
     }
   }, 1000);

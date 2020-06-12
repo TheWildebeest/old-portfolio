@@ -93,7 +93,7 @@ const fakeWord10 = new FakeWord(
 
 // Real words //
 
-const realWord1 = new RealWord('octothorpe', 'noun. the "hashtag" (#) symbol.');
+const realWord1 = new RealWord('octothorpe', 'noun. the "hashtag" symbol.');
 const realWord2 = new RealWord('agelast', 'noun. a person who never laughs.');
 const realWord3 = new RealWord('peristeronic', 'of or relating to pigeons');
 const realWord4 = new RealWord('biblioklept', 'noun. one who steals books.');
