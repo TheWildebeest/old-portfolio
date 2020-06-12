@@ -174,47 +174,38 @@ input {
 
   10% {
     color: fuchsia;
-    backdrop-filter: blur(20px);
   }
 
   20% {
     color: transparent;
-    backdrop-filter: none;
   }
 
   30% {
     color: #cf0;
-    backdrop-filter: blur(20px);
   }
 
   40% {
     color: transparent;
-    backdrop-filter: none;
   }
 
   50% {
     color: red;
-    backdrop-filter: blur(20px);
   }
 
   60% {
     color: transparent;
-    backdrop-filter: none;
   }
 
   70% {
     color: #ff8d03;
-    backdrop-filter: blur(20px);
   }
 
   80% {
     color: transparent;
-    backdrop-filter: none;
   }
 
   90% {
     color: white;
-    backdrop-filter: blur(20px);
   }
 
   100% {

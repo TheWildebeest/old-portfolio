@@ -207,48 +207,30 @@ input:focus {
   }
   10% {
     color: fuchsia;
-    -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
   }
   20% {
     color: transparent;
-    -webkit-backdrop-filter: none;
-            backdrop-filter: none;
   }
   30% {
     color: #cf0;
-    -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
   }
   40% {
     color: transparent;
-    -webkit-backdrop-filter: none;
-            backdrop-filter: none;
   }
   50% {
     color: red;
-    -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
   }
   60% {
     color: transparent;
-    -webkit-backdrop-filter: none;
-            backdrop-filter: none;
   }
   70% {
     color: #ff8d03;
-    -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
   }
   80% {
     color: transparent;
-    -webkit-backdrop-filter: none;
-            backdrop-filter: none;
   }
   90% {
     color: white;
-    -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
   }
   100% {
     color: transparent;
@@ -261,48 +243,30 @@ input:focus {
   }
   10% {
     color: fuchsia;
-    -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
   }
   20% {
     color: transparent;
-    -webkit-backdrop-filter: none;
-            backdrop-filter: none;
   }
   30% {
     color: #cf0;
-    -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
   }
   40% {
     color: transparent;
-    -webkit-backdrop-filter: none;
-            backdrop-filter: none;
   }
   50% {
     color: red;
-    -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
   }
   60% {
     color: transparent;
-    -webkit-backdrop-filter: none;
-            backdrop-filter: none;
   }
   70% {
     color: #ff8d03;
-    -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
   }
   80% {
     color: transparent;
-    -webkit-backdrop-filter: none;
-            backdrop-filter: none;
   }
   90% {
     color: white;
-    -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
   }
   100% {
     color: transparent;

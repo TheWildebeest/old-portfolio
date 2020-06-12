@@ -188,10 +188,10 @@ const timerMechanism = () => {
     minutes = minutes < 10 ? '0' + minutes : minutes;
     seconds = seconds < 10 ? '0' + seconds : seconds;
     timer.textContent = minutes + ':' + seconds;
-    if (timeRemaining < 60) {
+    if (timeRemaining < 30) {
       timer.style.color = 'orange';
     }
-    if (timeRemaining < 30) {
+    if (timeRemaining < 15) {
       timer.style.color = 'red';
     }
     if (timeRemaining < 10) {
