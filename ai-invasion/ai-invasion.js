@@ -107,7 +107,7 @@ const toggleReset = () => {
     gameBoard.style.border = 'none';
     keepDiscardButtonArea.innerHTML = '';
     timer.innerHTML = '01:10';
-    playAudio('./anthem.mp3');
+    playAudio('./ai-invasion/anthem.mp3');
     gameBoard.style.backgroundImage =
       'url(https://media.giphy.com/media/l0MYGWqxQUdCONvTq/giphy.gif)';
     gameBoard.style.backgroundSize = 'contain';
