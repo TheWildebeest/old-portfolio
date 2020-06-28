@@ -1,0 +1,665 @@
+/*---------- Fonts ----------*/
+@font-face {
+  font-family: 'sfalienencsolid';
+  src: url("./assets/fonts/sfalienencsolid.woff2") format("woff2"), url("./assets/fonts/sfalienencsolid.woff") format("woff"), url("./assets//fonts/sfalienencsolid.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'sfalienenc';
+  src: url("./assets/fonts/sfalienenc.woff2") format("woff2"), url("./assets/fonts/sfalienenc.woff") format("woff"), url("./assets/fonts/sfalienenc.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'streamster';
+  src: url("./assets/fonts/streamster.woff2") format("woff2"), url("./assets/fonts/streamster.woff") format("woff"), url("./assets/fonts/streamster.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'scriptina';
+  src: url("./assets/fonts/scriptina.woff2") format("woff2"), url("./assets/fonts/scriptina.woff") format("woff"), url("./assets/fonts/scriptina.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*---------- Animations ----------*/
+@-webkit-keyframes cascade-in {
+  from {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes cascade-in {
+  from {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes cascade-out {
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes cascade-out {
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes flyin {
+  from {
+    -webkit-filter: blur(8px);
+            filter: blur(8px);
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0;
+  }
+  to {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes flyin {
+  from {
+    -webkit-filter: blur(8px);
+            filter: blur(8px);
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0;
+  }
+  to {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes flyout {
+  from {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    -webkit-filter: blur(8px);
+            filter: blur(8px);
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes flyout {
+  from {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    -webkit-filter: blur(8px);
+            filter: blur(8px);
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes foldAway {
+  from {
+    opacity: 1;
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: rotateX(-20degrees);
+            transform: rotateX(-20degrees);
+  }
+}
+
+@keyframes foldAway {
+  from {
+    opacity: 1;
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: rotateX(-20degrees);
+            transform: rotateX(-20degrees);
+  }
+}
+
+@-webkit-keyframes unFold {
+  from {
+    margin-bottom: 50px;
+  }
+  to {
+    margin-bottom: 0;
+  }
+}
+
+@keyframes unFold {
+  from {
+    margin-bottom: 50px;
+  }
+  to {
+    margin-bottom: 0;
+  }
+}
+
+/*---------- CSS Reset ----------*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* a {
+  text-decoration: none;
+  color: unset;
+}
+
+/*----------General styles----------*/
+body {
+  max-width: 100vw;
+  font-size: 16px;
+  background-color: #0b0014;
+}
+
+/*----------Landing page styles ----------*/
+.landing.page {
+  border: unset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+
+#enter-button {
+  padding: 2%;
+  line-height: 2em;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h6:hover,
+#enter-button:hover,
+#bio-button:hover,
+#portfolio-button:hover,
+#contact-button:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+/*---------- Main content pages styling----------*/
+.page {
+  font-family: "sfalienencsolid", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+nav.fixed {
+  list-style: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 8vh;
+  width: 100%;
+  color: #ee6352;
+  background-color: #0b0014;
+}
+
+nav.fixed ul {
+  height: 100%;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  border-bottom: 2px solid #8ea8c3;
+}
+
+nav.fixed ul li {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav.fixed ul li span {
+  text-align: center;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: 100%;
+}
+
+/*---------- Specific section stylings. Sections take up one viewport height.
+For very small devices sections take up two heights. ---------- */
+#bio,
+#portfolio,
+#contact {
+  font-family: "sfalienencsolid", sans-serif;
+}
+
+#bio .title,
+#portfolio .title,
+#contact .title {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin: 12vh 10% 10%;
+}
+
+#bio .title h2,
+#portfolio .title h2,
+#contact .title h2 {
+  color: whitesmoke;
+  text-shadow: 0 0 50px whitesmoke;
+  font-size: 2em;
+  line-height: 100%;
+}
+
+#bio article,
+#portfolio article,
+#contact article {
+  font-family: Orbitron, consolas, Arial, Helvetica, sans-serif;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: 75%;
+}
+
+#bio article div,
+#portfolio article div,
+#contact article div {
+  width: 100%;
+}
+
+#bio article div h3,
+#portfolio article div h3,
+#contact article div h3 {
+  color: #ee6352;
+  font-size: 1.5em;
+  text-align: left;
+  width: 100%;
+  padding: 0% 0% 5%;
+}
+
+#bio article div h4,
+#portfolio article div h4,
+#contact article div h4 {
+  color: #8ea8c3;
+  font-size: 1.2em;
+  text-align: left;
+  width: 100%;
+  padding: 0% 0% 2%;
+}
+
+#bio article div h5,
+#portfolio article div h5,
+#contact article div h5 {
+  color: #8ea8c3;
+  font-size: 1em;
+  text-align: left;
+  width: 100%;
+  padding: 0% 0% 2%;
+}
+
+#bio article div h6,
+#portfolio article div h6,
+#contact article div h6 {
+  color: #7d53de;
+  text-decoration: underline;
+  font-style: italic;
+  font-size: 0.9em;
+  text-align: justify;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0% 0% 2%;
+}
+
+#bio article div p,
+#portfolio article div p,
+#contact article div p {
+  color: whitesmoke;
+  text-align: left;
+  width: 100%;
+  font-size: 1em;
+  padding: 0% 0% 5%;
+}
+
+#bio article ul,
+#portfolio article ul,
+#contact article ul {
+  list-style: square inside;
+  color: #8ea8c3;
+  padding: 0% 0% 5%;
+}
+
+#bio article ul li,
+#portfolio article ul li,
+#contact article ul li {
+  font-size: 0.7em;
+}
+
+#bio article .caption,
+#portfolio article .caption,
+#contact article .caption {
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+/*---------- Homepage styles----------*/
+#home {
+  height: 100vh;
+  font-family: sfalienencsolid, sans-serif;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+#home .header-title {
+  margin: 10%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 30%;
+  opacity: 0;
+  -webkit-transition: opacity 2s ease;
+  transition: opacity 2s ease;
+}
+
+#home .header-title .title-one {
+  color: whitesmoke;
+  text-shadow: 0 0 50px whitesmoke;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin: 1% auto;
+  font-size: 3em;
+  line-height: 1em;
+}
+
+#home .header-title .title-two {
+  color: #8ea8c3;
+  text-shadow: 0 0 50px #8ea8c3;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin: 0 auto;
+  font-size: 2em;
+  line-height: 1em;
+}
+
+#home nav {
+  list-style: none;
+  width: 100%;
+  height: 60%;
+}
+
+#home nav ul {
+  width: 100%;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: initial;
+  border: unset;
+}
+
+#home nav ul li {
+  border-bottom: 1px solid #8ea8c3;
+  font-size: 1.5em;
+  width: 60%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  line-height: 15vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#home nav ul li * {
+  border: unset;
+}
+
+/*---------- Footer styles ----------*/
+footer {
+  display: absolute;
+  position: fixed;
+  bottom: -12vh;
+  left: 0;
+  color: #8ea8c3;
+  height: 12vh;
+  width: 100%;
+  background-color: #0b0014;
+  border-top: 1px double #8ea8c3;
+  border-radius: 2em;
+}
+
+footer nav {
+  height: 100%;
+  width: 100%;
+}
+
+footer nav ul {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  letter-spacing: initial;
+}
+
+footer nav ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: auto;
+  color: inherit;
+}
+
+/*----------Responsive design----------*/
+@media screen and (min-width: 823px) {
+  h1,
+  h2 {
+    width: 100%;
+  }
+  header.page div.title {
+    height: 40vh;
+  }
+  header.page nav {
+    height: 60vh;
+  }
+  header.page ul {
+    width: 100%;
+    height: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+  }
+}
+
+/*---------- Selectors for JavaScript functions ----------*/
+section.page:not(.on) {
+  display: none;
+}
+
+.cascade-in {
+  -webkit-animation: cascade-in cubic-bezier(0.5, -0.5, 0.5, 1.5) 1;
+          animation: cascade-in cubic-bezier(0.5, -0.5, 0.5, 1.5) 1;
+  opacity: 1;
+  color: #ee6352;
+}
+
+.cascade-out {
+  -webkit-animation: cascade-out cubic-bezier(0.5, -0.5, 0.5, 1.5) 1;
+          animation: cascade-out cubic-bezier(0.5, -0.5, 0.5, 1.5) 1;
+  opacity: 0;
+}
+
+.fly-in {
+  -webkit-animation: flyin 1s cubic-bezier(0.5, -0.5, 0.5, 1.5) 1;
+          animation: flyin 1s cubic-bezier(0.5, -0.5, 0.5, 1.5) 1;
+  border: 1px solid #ee6352;
+  color: #ee6352;
+  background-image: url("./assets/images/downwardsbackgroundfireopal.gif");
+  opacity: 1;
+}
+
+.fly-out {
+  color: #8ea8c3;
+  border: 1px solid #8ea8c3;
+  -webkit-animation: flyout 0.75s cubic-bezier(0.5, -0.5, 0.5, 1.5) 1;
+          animation: flyout 0.75s cubic-bezier(0.5, -0.5, 0.5, 1.5) 1;
+  opacity: 0;
+  background-image: url("./assets/images/downwardsbackgroundmingblue.gif");
+}
+/*# sourceMappingURL=index.css.map */
