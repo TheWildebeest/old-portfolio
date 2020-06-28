@@ -14,6 +14,7 @@ const portfolioButton = document.querySelector('#portfolio-button');
 const contactButton = document.querySelector('#contact-button');
 const bioPage = document.querySelector('.bio.page');
 const portfolioPage = document.querySelector('.portfolio.page');
+const portfolioLinks = document.querySelectorAll('h6');
 const contactPage = document.querySelector('.contact.page');
 
 const hack = () => {
@@ -98,8 +99,12 @@ const loadContactPage = () => {
 homePageButtons.forEach((homePageButton) => {
   console.log(homePageButton);
   homePageButton.addEventListener('click', () => doNavEffect(event));
-
 });
+
+portfolioLinks.forEach((portfolioLink) => {
+  portfolioLink.addEventListener('click', () => playBeep('./index/assets/audio/mediumbeep.mp3'));
+});
+
 enterButton.addEventListener('mousedown', () => playBeep('./index/assets/audio/lowbeep.mp3'));
 enterButton.addEventListener('click', loadMainMenu);
 bioButton.addEventListener('click', loadBioPage);
