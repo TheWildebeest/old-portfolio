@@ -158,13 +158,13 @@ const playerScoreEvent = (event) => {
       console.log('CORRECT');
       gameBoard.style.backgroundImage =
         'url(https://media.giphy.com/media/26tknCqiJrBQG6bxC/giphy.gif)';
-      playAudio('./congrats.mp3');
+      playAudio('./ai-invasion/congrats.mp3');
       playerScore += thisScore;
     } else {
       console.log('INCORRECT');
       gameBoard.style.backgroundImage =
         'url(https://media.giphy.com/media/hPPx8yk3Bmqys/giphy.gif)';
-      playAudio('./i-dont-think-so.mp3');
+      playAudio('./ai-invasion/i-dont-think-so.mp3');
       playerScore -= thisScore;
     }
     scoreBoard.innerHTML = playerScore;
