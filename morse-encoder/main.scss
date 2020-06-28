@@ -1,0 +1,123 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: rockwell;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+header {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: max-content;
+  padding: 5%;
+  background-color: #0b0014;
+  color: whitesmoke;
+}
+
+main {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  .translator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+    width: 100%;
+
+    .user-input {
+      margin: 2%;
+      padding: 2%;
+      text-align: left;
+      border: none;
+      border-bottom: 2px solid #0b0014;
+      border-left: 2px solid #0b0014;
+      height: 60%;
+      width: 90%;
+      background-color: transparent;
+      transition: color ease-in-out 1s, background-color ease-in-out 1s,
+        border-color ease-in-out 1s;
+
+      &::placeholder {
+        color: #0b0014;
+        transition: color ease-in-out 1s;
+      }
+
+      &:focus {
+        text-align: left;
+        outline: none;
+        background-color: #0b0014;
+        color: whitesmoke;
+        transition: background-color ease-in-out 1s, color ease-in-out 1s,
+          border-color 1s ease-in-out;
+        border-bottom: 2px solid whitesmoke;
+        border-left: 2px solid whitesmoke;
+
+        &::placeholder {
+          color: whitesmoke;
+        }
+      }
+    }
+  }
+}
+
+.output {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30%;
+  width: 100%;
+
+  p {
+    margin: 2%;
+    padding: 2%;
+    text-align: left;
+    border: none;
+    border-top: 2px solid #0b0014;
+    border-right: 2px solid #0b0014;
+    height: 60%;
+    width: 90%;
+    background-color: transparent;
+    transition: color ease-in-out 1s, background-color ease-in-out 1s;
+
+    &::placeholder {
+      color: #0b0014;
+      transition: color ease-in-out 1s;
+    }
+
+    &:focus {
+      text-align: left;
+      outline: none;
+      background-color: #0b0014;
+      color: whitesmoke;
+      transition: background-color ease-in-out 1s, color ease-in-out 1s;
+
+      &::placeholder {
+        color: whitesmoke;
+      }
+    }
+  }
+}
+
+button {
+  color: #0b0014;
+  background-color: whitesmoke;
+  margin: 1%;
+  padding: 0 2%;
+
+  &:active {
+    color: whitesmoke;
+    background-color: #0b0014;
+  }
+}
