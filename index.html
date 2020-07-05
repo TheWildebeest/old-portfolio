@@ -8,145 +8,233 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/9ff089ecf9.js" async defer crossorigin="anonymous"></script>
   <script src="./index/assets/app.js" async defer></script>
-  <link rel="preload" href="./index/assets/images/downwardsbackgroundfireopal.gif" as="image">
-  <link rel="preload" href="./index/assets/images/downwardsbackgroundmingblue.gif" as="image">
-
-  <link rel="preload" href="./index/assets/images/downwardsbackgroundcadetgrey.gif" as="image">
-  <link rel="preload" href="./index/assets/images/downwardsbackgroundcultured.gif" as="image">
-  <link rel="preload" href="./index/assets/images/downwardsbackgroundplain.gif" as="image">
-  <link rel="preload" href="./index/assets/images/downwardsbackgroundslateblue.gif" as="image">
-  <link rel="preload" href="./index/assets/images/downwardsbackgroundxiketic.gif" as="image">
 
   <title>David Wildman—Software Developer</title>
 </head>
 
 <body>
-  <section class="landing page on">
-    <span id="enter-button" class="fly-in">ENTER</span>
-  </section>
   <section class="home page" id="home">
-    <div class="header-title">
-      <span class="title-one">David Wildman</span>
-      <span class="title-two">Software Developer</span>
+    <div class="header wrapper">
+      <div class="header title">
+        <span class="title-one">David Wildman</span>
+        <span class="title-two">Software Developer</span>
+      </div>
     </div>
-    <nav>
+    <nav class="home-nav">
       <ul>
-        <li class="hover-fx-subtle" id="bio-button">
+        <li class="bio button">
           <span>Bio</span>
         </li>
-        <li class="hover-fx-subtle" id="portfolio-button">
+        <li class="portfolio button">
           <span>Portfolio</span>
         </li>
-        <li class="hover-fx-subtle" id="contact-button">
+        <li class="contact button">
           <span>Contact</span>
         </li>
       </ul>
     </nav>
+    <footer class="footer">
+      <nav class="footer-nav">
+        <ul>
+          <li class="hover-fx-subtle">
+            <i class="hover-fx-highlight fas fa-envelope"></i>
+          </li>
+          <li class="hover-fx-subtle">
+            <i class="hover-fx-highlight fab fa-weixin"></i>
+          </li>
+          <li class="hover-fx-subtle">
+            <i class="hover-fx-highlight fab fa-github"></i>
+          </li>
+          <li class="hover-fx-subtle">
+            <i class="hover-fx-highlight fab fa-linkedin"></i>
+          </li>
+          <li class="hover-fx-subtle">
+            <i class="hover-fx-highlight fab fa-facebook-square"></i>
+          </li>
+        </ul>
+      </nav>
+    </footer>
   </section>
 
   <section class="bio page" id="bio">
     <nav class="fixed">
       <ul>
-        <li><span>Bio</span></li>
-        <li><span>Portfolio</span></li>
-        <li><span>Contact</span></li>
+        <li class="bio button"><span>Bio</span></li>
+        <li class="portfolio button"><span>Portfolio</span></li>
+        <li class="contact button"><span>Contact</span></li>
       </ul>
     </nav>
-    <div class="title">
-      <h2>Bio</h2>
+    <div class="bio wrapper">
+      <div class="bio title">
+        <span>Bio</span>
+      </div>
     </div>
+
     <article>
       <div>
-        <h3>Education</h3>
-        <h4>University of Cambridge</h4>
-        <p>M.A. Chinese Studies</p>
-        <h4>_nology</h4>
-        <p>Intensive Software Development training</p>
+        <span class="expandable">
+          <h3>Education</h3>
+          <h3>＋</h3>
+        </span>
+        <span class="content">
+          <h4>Peterhouse, Cambridge</h4>
+          <h5>Subject</h5>
+          <p>M.A. Chinese Studies</p>
+          <h4>_nology</h4>
+          <h5>Subject</h5>
+          <p>Intensive Software Development training</p>
+        </span>
       </div>
+    </article>
+
+
+    <article>
       <div>
-        <h3>Skills</h3>
-        <h4>Technologies</h4>
-        <p>HTML | CSS | React | Bootstrap | Git | GitHub |</p>
-        <h4>Professional skills</h4>
-        <p>
-          Excellent communicator | Strong attention to detail | Confident and
-          assertive | Reliable and hardworking |
-        </p>
+        <span class="expandable">
+          <h3>Skills</h3>
+          <h3>＋</h3>
+        </span>
+        <span class="content">
+          <h3>Skills</h3>
+          <h4>Technologies</h4>
+          <p>| HTML</p>
+          <p>| CSS</p>
+          <p>| JavaScript</p>
+          <p>| React </p>
+          <p>| Node.js</p>
+          <p>| Firebase</p>
+          <h4>Professional skills</h4>
+          <p>| Excellent communicator</p>
+          <p>| Strong attention to detail</p>
+          <p>| Confident and assertive</p>
+          <p>| Reliable and hardworking</p>
+          <p>| Intelligent and creative</p>
+        </span>
       </div>
     </article>
   </section>
 
   <section class="portfolio page" id="portfolio">
-    <div class="title">
-      <h2>Portfolio</h2>
+    <nav class="fixed">
+      <ul>
+        <li class="bio button"><span>Bio</span></li>
+        <li class="portfolio button"><span>Portfolio</span></li>
+        <li class="contact button"><span>Contact</span></li>
+      </ul>
+    </nav>
+    <div class="portfolio wrapper">
+      <div class="portfolio title">
+        <span>Portfolio</span>
+      </div>
     </div>
     <article>
       <div>
-        <h3>Project One</h3>
-        <h4>AI INVASION</h4>
-        <h6><a href="https://thewildebeest.github.io/ai-invasion.html" target="_blank">Play AI INVASION</a>
-        </h6>
-        <p>Light-hearted political satire in the form of a single-player word game.</p>
-        <p>This game uses JavaScript classes to generate DOM elements and pass data to them.</p>
-        <p>The user can then interact with these elements to score points.</p>
-        <h5>Tech:</h5>
-        <p>HTML | CSS | Vanilla JavaScript | OOP</p>
+        <span class="expandable">
+          <h3>1. AI INVASION</h3>
+          <h3>＋</h3>
+        </span>
+        <span class="content">
+          <h6><a href="https://thewildebeest.github.io/ai-invasion.html" target="_blank">Play AI INVASION</a>
+          </h6>
+          <p>Light-hearted political satire in the form of a single-player word game.</p>
+          <p>This game uses JavaScript classes to generate DOM elements and pass data to them.</p>
+          <p>The user can then interact with these elements to score points.</p>
+          <h5>Tech:</h5>
+          <p>| HTML</p>
+          <p>| CSS</p>
+          <p>| Vanilla JavaScript</p>
+          <p>| OOP</p>
+        </span>
       </div>
+    </article>
+
+    <article>
       <div>
-        <h3>Project Two</h3>
-        <h4>Morse Encoder</h4>
-        <h6><a href="https://thewildebeest.github.io/morse-encoder.html" target="_blank">Try out
-            Morse Encoder</a>
-        </h6>
-        <p>A simple web app which converts a string of latin characters into international morse code.</p>
-        <p>There are many approaches to solving this tech test.</p>
-        <p>I was more confident with OOP at the time, so I challenged myself to use array iterators and functional
-          programming to solve this.</p>
-        <p>The 'translator' is a simple function which:</p>
-        <ul>
-          <li>converts the user's input from a string into an array</li>
-          <li>loops through this array</li>
-          <li>finds the index of the current character in the Latin Alphabet array</li>
-          <li>returns the character from the same index in the Morse Code Alphabet array</li>
-          <li>adds the character to a string</li>
-          <li>inserts the string onto the page</li>
-        </ul>
-        <h5>Tech:</h5>
-        <p>HTML | CSS | Vanilla JavaScript | Functional Programming |</p>
+        <span class="expandable">
+          <h3>2. MORSE ENCODER</h3>
+          <h3>＋</h3>
+        </span>
+        <span class="content">
+          <h6><a href="https://thewildebeest.github.io/ai-invasion.html" target="_blank">Play AI INVASION</a>
+          </h6>
+          <p>A simple web app which converts a string of latin characters into international morse code.</p>
+          <p>There are many approaches to solving this tech test.</p>
+          <p>I was more confident with OOP at the time, so I challenged myself to use array iterators and functional
+            programming to solve this.</p>
+          <p>The 'translator' is a simple function which:</p>
+          <ul>
+            <li>converts the user's input from a string into an array</li>
+            <li>loops through this array</li>
+            <li>finds the index of the current character in the Latin Alphabet array</li>
+            <li>returns the character from the same index in the Morse Code Alphabet array</li>
+            <li>adds the character to a string</li>
+            <li>inserts the string onto the page</li>
+          </ul>
+          <h5>Tech:</h5>
+          <p>| HTML</p>
+          <p>| CSS</p>
+          <p>| Vanilla JavaScript</p>
+          <p>| Functional Programming</p>
+        </span>
       </div>
     </article>
   </section>
 
   <section class="contact page" id="contact">
-    <div class="title">
-      <h2>Contact</h2>
+    <nav class="fixed">
+      <ul>
+        <li class="bio button"><span>Bio</span></li>
+        <li class="portfolio button"><span>Portfolio</span></li>
+        <li class="contact button"><span>Contact</span></li>
+      </ul>
+    </nav>
+    <div class="contact wrapper">
+      <div class="contact title">
+        <span>Contact</span>
+      </div>
     </div>
     <article>
-      <div></div>
+      <div>
+        <span class="expandable">
+          <h3>Email</h3>
+          <h3>＋</h3>
+        </span>
+        <span class="content">
+          <p>david.m.wildman@gmail.com</p>
+        </span>
+      </div>
+    </article>
+    <article>
+      <div>
+        <span class="expandable">
+          <h3>Whatsapp</h3>
+          <h3>＋</h3>
+        </span>
+        <span class="content">
+          <p>+44 7890 346 023</p>
+        </span>
+      </div>
+    </article>
+    <article>
+      <div>
+        <span class="expandable">
+          <h3>Email</h3>
+          <h3>＋</h3>
+        </span>
+        <span class="content">
+          <p>david.m.wildman@gmail.com</p>
+        </span>
+      </div>
     </article>
   </section>
 
-  <footer class="on">
-    <nav>
-      <ul>
-        <li class="hover-fx-subtle">
-          <i class="hover-fx-highlight fas fa-envelope"></i>
-        </li>
-        <li class="hover-fx-subtle">
-          <i class="hover-fx-highlight fab fa-weixin"></i>
-        </li>
-        <li class="hover-fx-subtle">
-          <i class="hover-fx-highlight fab fa-github"></i>
-        </li>
-        <li class="hover-fx-subtle">
-          <i class="hover-fx-highlight fab fa-linkedin"></i>
-        </li>
-        <li class="hover-fx-subtle">
-          <i class="hover-fx-highlight fab fa-facebook-square"></i>
-        </li>
-      </ul>
-    </nav>
-  </footer>
+  <!--
+    
+    Button for use later
+
+<section class="landing page">
+<span id="enter-button" class="home button fly-in">David 2.0</span>
+</section> -->
 
 </body>
 
