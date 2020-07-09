@@ -1,17 +1,5 @@
 /*---------- Animations ----------*/
 
-@keyframes cascade-in {
-  from {
-    transform: scale(1.5);
-    opacity: 0;
-  }
-
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
 @keyframes cascade-out {
   to {
     transform: scale(1.5);
