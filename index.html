@@ -8,52 +8,53 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/9ff089ecf9.js" async defer crossorigin="anonymous"></script>
   <script src="./index/assets/app.js" async defer></script>
-
   <title>David Wildman—Software Developer</title>
 </head>
 
 <body>
   <section class="home page" id="home">
-    <div class="header wrapper">
-      <div class="header title">
-        <span class="title-one">David Wildman</span>
-        <span class="title-two">Software Developer</span>
+    <div class="page-border">
+      <div class="header wrapper">
+        <div class="header title">
+          <span class="title-one" data-content="David Wildman">David Wildman</span>
+          <span class="title-two" data-content="Software Developer">Software Developer</span>
+        </div>
       </div>
-    </div>
-    <nav class="home-nav">
-      <ul>
-        <li class="bio button">
-          <span>Bio</span>
-        </li>
-        <li class="portfolio button">
-          <span>Portfolio</span>
-        </li>
-        <li class="contact button">
-          <span>Contact</span>
-        </li>
-      </ul>
-    </nav>
-    <footer class="footer">
-      <nav class="footer-nav">
+      <nav class="home-nav">
         <ul>
-          <li class="hover-fx-subtle">
-            <i class="hover-fx-highlight fas fa-envelope"></i>
+          <li class="bio button">
+            <span>Bio</span>
           </li>
-          <li class="hover-fx-subtle">
-            <i class="hover-fx-highlight fab fa-weixin"></i>
+          <li class="portfolio button">
+            <span>Portfolio</span>
           </li>
-          <li class="hover-fx-subtle">
-            <i class="hover-fx-highlight fab fa-github"></i>
-          </li>
-          <li class="hover-fx-subtle">
-            <i class="hover-fx-highlight fab fa-linkedin"></i>
-          </li>
-          <li class="hover-fx-subtle">
-            <i class="hover-fx-highlight fab fa-facebook-square"></i>
+          <li class="contact button">
+            <span>Contact</span>
           </li>
         </ul>
       </nav>
-    </footer>
+      <footer class="footer">
+        <nav class="footer-nav">
+          <ul>
+            <li class="hover-fx-subtle">
+              <i class="hover-fx-highlight fas fa-envelope"></i>
+            </li>
+            <li class="hover-fx-subtle">
+              <i class="hover-fx-highlight fab fa-weixin"></i>
+            </li>
+            <li class="hover-fx-subtle">
+              <i class="hover-fx-highlight fab fa-github"></i>
+            </li>
+            <li class="hover-fx-subtle">
+              <i class="hover-fx-highlight fab fa-linkedin"></i>
+            </li>
+            <li class="hover-fx-subtle">
+              <i class="hover-fx-highlight fab fa-facebook-square"></i>
+            </li>
+          </ul>
+        </nav>
+      </footer>
+    </div>
   </section>
 
   <section class="bio page" id="bio">
@@ -64,37 +65,34 @@
         <li class="contact button"><span>Contact</span></li>
       </ul>
     </nav>
-    <div class="bio wrapper">
-      <div class="bio title">
-        <span>Bio</span>
+    <div class="page-border">
+      <div class="bio wrapper">
+        <div class="bio title">
+          <span>Bio</span>
+        </div>
       </div>
-    </div>
-
-    <article>
-      <div>
-        <span class="expandable">
-          <h3>Education</h3>
-          <h3>＋</h3>
-        </span>
-        <span class="content">
+      <article>
+        <div class="article-heading">
+          <h3 class="article-heading-text">Education</h3>
+        </div>
+        <div class="article-content">
           <h4>Peterhouse, Cambridge</h4>
           <h5>Subject</h5>
           <p>M.A. Chinese Studies</p>
           <h4>_nology</h4>
           <h5>Subject</h5>
           <p>Intensive Software Development training</p>
-        </span>
-      </div>
-    </article>
+        </div>
+        <div class="article-footer">
+          <h3 class="article-footer-text">＋</h3>
+        </div>
+      </article>
 
-
-    <article>
-      <div>
-        <span class="expandable">
-          <h3>Skills</h3>
-          <h3>＋</h3>
-        </span>
-        <span class="content">
+      <article>
+        <div class="article-heading">
+          <h3 class="article-heading-text">Skills</h3>
+        </div>
+        <div class="article-content">
           <h3>Skills</h3>
           <h4>Technologies</h4>
           <p>| HTML</p>
@@ -109,9 +107,47 @@
           <p>| Confident and assertive</p>
           <p>| Reliable and hardworking</p>
           <p>| Intelligent and creative</p>
-        </span>
-      </div>
-    </article>
+        </div>
+        <div class="article-footer">
+          <h3 class="article-footer-text">＋</h3>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="portfolio page" id="portfolio">
+    <nav class="fixed">
+      <ul>
+        <li class="bio button"><span>Bio</span></li>
+        <li class="portfolio button"><span>Portfolio</span></li>
+        <li class="contact button"><span>Contact</span></li>
+      </ul>
+    </nav>
+    <div class="page-border">
+      <article>
+        <div>
+          <span class="expandable">
+            <h3>Skills</h3>
+            <h3>＋</h3>
+          </span>
+          <span class="content">
+            <h3>Skills</h3>
+            <h4>Technologies</h4>
+            <p>| HTML</p>
+            <p>| CSS</p>
+            <p>| JavaScript</p>
+            <p>| React</p>
+            <p>| Node.js</p>
+            <p>| Firebase</p>
+            <h4>Professional skills</h4>
+            <p>| Excellent communicator</p>
+            <p>| Strong attention to detail</p>
+            <p>| Confident and assertive</p>
+            <p>| Reliable and hardworking</p>
+            <p>| Intelligent and creative</p>
+          </span>
+        </div>
+      </article>
   </section>
 
   <section class="portfolio page" id="portfolio">
@@ -134,8 +170,7 @@
           <h3>＋</h3>
         </span>
         <span class="content">
-          <h6><a href="https://thewildebeest.github.io/ai-invasion.html" target="_blank">Play AI INVASION</a>
-          </h6>
+          <h6><a href="https://thewildebeest.github.io/ai-invasion.html" target="_blank">Play AI INVASION</a></h6>
           <p>Light-hearted political satire in the form of a single-player word game.</p>
           <p>This game uses JavaScript classes to generate DOM elements and pass data to them.</p>
           <p>The user can then interact with these elements to score points.</p>
@@ -155,12 +190,13 @@
           <h3>＋</h3>
         </span>
         <span class="content">
-          <h6><a href="https://thewildebeest.github.io/ai-invasion.html" target="_blank">Play AI INVASION</a>
+          <h6><a href="https://thewildebeest.github.io/morse-encoder.html" target="_blank">Try out MORSE ENCODER</a>
           </h6>
           <p>A simple web app which converts a string of latin characters into international morse code.</p>
           <p>There are many approaches to solving this tech test.</p>
           <p>I was more confident with OOP at the time, so I challenged myself to use array iterators and functional
             programming to solve this.</p>
+          >>>>>>> 8f389c7e5f67e6a27c8b63d3fc597a5611c68d0e
           <p>The 'translator' is a simple function which:</p>
           <ul>
             <li>converts the user's input from a string into an array</li>
@@ -178,6 +214,7 @@
         </span>
       </div>
     </article>
+    </div>
   </section>
 
   <section class="contact page" id="contact">
@@ -235,7 +272,6 @@
 <section class="landing page">
 <span id="enter-button" class="home button fly-in">David 2.0</span>
 </section> -->
-
 </body>
 
 </html>
