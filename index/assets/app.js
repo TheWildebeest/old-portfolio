@@ -12,6 +12,10 @@ const portfolioLinks = document.querySelectorAll('h6');
 const contactPage = document.querySelector('.contact.page');
 const footer = document.querySelector('.footer');
 
+const expandButtons = document.querySelectorAll('.article-footer-text');
+
+let pageTitle = document.querySelector('.on .title');
+
 const addEventListeners = (buttons, clickBehaviour) => {
   buttons.forEach(button => {
     button.addEventListener('click', () => clickBehaviour(event));
@@ -26,13 +30,19 @@ const playBeep = (filePath) => {
 
 
 const updatePage = (event) => {
-  playBeep('./index/assets/audio/lowbeep.mp3');
-  let livePage = document.querySelector('.on');
-  let newPage = document.querySelector(`.${event.currentTarget.classList[0]}.page`);
-  setTimeout(() => {
-    livePage.classList.remove('on');
-    newPage.classList.add('on');
-  }, 2000);
+  if (document.querySelector('.on') === null) {
+    loadMainMenu();
+  } else {
+    playBeep('./index/assets/audio/lowbeep.mp3');
+    let livePage = document.querySelector('.on');
+    let newPage = document.querySelector(`.${event.currentTarget.classList[0]}.page`);
+    setTimeout(() => {
+      livePage.classList.remove('on');
+      newPage.classList.add('on');
+      pageTitle = document.querySelector('.on .title');
+      console.log(pageTitle.classList[0]);
+    }, 2000);
+  }
 };
 
 
@@ -65,6 +75,27 @@ const mainMenuFadeOut = (event) => {
 };
 
 
+const pageFadeIn = (page, event) => {
+  setTimeout((() => `.${page}pageArticles`.forEach((article, index) => {
+    article.style.transitionDelay = `${index * 0.4}s`;
+    article.style.opacity = '1';
+    article.style.transform = 'scale(1)';
+    pageTitle.style.opacity = '1';
+  })), 500);
+}
+
+const pageFadeOut = (page, event) => {
+  event.currentTarget.style.color = '#8ea8c3';
+  event.currentTarget.style.borderBottom = '2px solid #ee6352';
+  `.${page}pageButtons`.forEach((button, index) => {
+    if (button != event.currentTarget) {
+      button.style.transitionDelay = '1.5s';
+      button.style.opacity = '0';
+      button.style.transform = 'scale(1.5)';
+    }
+    `.${page}pageTitle`.style.opacity = '0';
+  });
+};
 
 /* Navigation functions */
 
@@ -78,6 +109,12 @@ const loadMainMenu = (event) => {
     headerTitle.style.opacity = '1';
   }, 2000);
 };
+
+const expandArticle = (event) => {
+  event.currentTarget.parentNode.parentNode.childNodes[3].classList.toggle('open');
+  event.currentTarget.parentNode.parentNode.childNodes[5].classList.toggle('open');;
+
+}
 
 addEventListeners(homePageButtons, mainMenuFadeOut);
 addEventListeners(homeButtons, loadMainMenu);
@@ -93,10 +130,7 @@ addEventListeners(bioButtons, updatePage);
 addEventListeners(portfolioButtons, updatePage);
 addEventListeners(contactButtons, updatePage);
 
-
-loadMainMenu();
-
-
+addEventListeners(expandButtons, expandArticle);
 
 // const landingPage = document.querySelector('.landing.page');
 
@@ -111,4 +145,6 @@ loadMainMenu();
 ////    footer.style.height = '8vh';
 // footer.style.opacity = '1';
 
-console.log(bioPage, portfolioPage, portfolioLinks, contactPage, footer, event);
+// console.log(bioPage, portfolioPage, portfolioLinks, contactPage, footer, event);
+
+updatePage();
