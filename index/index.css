@@ -188,7 +188,7 @@ body {
   max-width: 100vw;
   font-size: 12px;
   background-color: #0b0014;
-  background-image: url("./assets/images/backgroundsquares.svg");
+  background-image: url(".index/assets/images/backgroundsquares.svg");
   background-position: top;
   background-size: 100vw;
   background-attachment: fixed;
