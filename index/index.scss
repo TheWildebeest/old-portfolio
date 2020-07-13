@@ -526,8 +526,7 @@ article {
       text-align: center;
       margin-left: auto;
       width: max-content;
-      height: max-content;
-      line-height: 50%;
+      line-height: 48%;
       color: $fire-opal;
       border-bottom: 1px solid $fire-opal;
       border-right: 1px solid $fire-opal;
@@ -588,12 +587,15 @@ article {
     h2 {
       font-size: 2em;
     }
+
     h3 {
       font-size: 0.9em;
     }
+
     h4 {
       font-size: 0.85em;
     }
+
     h5 {
       font-size: 0.78em;
     }
@@ -601,6 +603,7 @@ article {
     h6 {
       font-size: 0.75em;
     }
+
     p {
       font-size: 0.7em;
     }
