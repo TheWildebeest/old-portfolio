@@ -4,6 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="manifest" href="./site.webmanifest">
+  <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="./index/index.css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400&display=swap" rel="stylesheet">
@@ -495,13 +502,9 @@
                 this.</p>
               <p>I took the opportunity to practice array iterators and functional
                 programming in order to solve this.</p>
-              <p>The 'translator' is a simple function which:</p>
-              <p>▪ converts the user's input from a string into an array</p>
-              <p>▪ loops through this array</p>
-              <p>▪ finds the index of the current character in the Latin Alphabet array</p>
-              <p>▪ returns the character from the same index in the Morse Code Alphabet array</p>
-              <p>▪ adds the character to a string</p>
-              <p>▪ inserts the string onto the page</p>
+              <p>The 'translator' is a simple function which converts the string into an array, looks up each character
+                in a Latin character set array, and returns the character from the same index in a Morse alphabet array,
+                appending this to a new string which is rendered on to the page.</p>
             </div>
             <div class="section-heading">
               <h5>Tech:</h5>
@@ -621,8 +624,7 @@
             <div class="section-highlight">
               <span class="left"><i class="fas fa-award"></i></span>
               <span class="right">
-                <p>The client was greatly impressed with the MVP, and both sides are keen to continue working on this
-                  project.
+                <p>The client is looking to market the product in the near future.
                 </p>
               </span>
             </div>
@@ -653,9 +655,16 @@
           <h3 class="article-footer-text">＋</h3>
         </div>
       </article>
-      <article class="subtitle">Gallery
+      <article class="subtitle">
+        <div class="gallery-nav">
+          <p class="previous">&lt</p>
+        </div>
+        Gallery
+        <div class="gallery-nav">
+          <p class="next">></p>
+        </div>
       </article>
-      <article class="gallery">
+      <article class="gallery active-image">
         <span class="gallery-title">AI INVASION</span>
         <img src="./index/assets/images/aiinvasion.gif" alt="AI INVASION gameplay">
       </article>
@@ -664,8 +673,12 @@
         <img src="./index/assets/images/namdb.gif" alt="movie database app demo">
       </article>
       <article class="gallery">
-        <span class="gallery-title">Intergr8HR</span>
-        <img src="./index/assets/images/intergr8.gif" alt="intergr8 app demo">
+        <span class="gallery-title">Intergr8HR—create ticket</span>
+        <img src="./index/assets/images/createticket.gif" alt="intergr8 app demo">
+      </article>
+      <article class="gallery">
+        <span class="gallery-title">Intergr8HR—resolve ticket</span>
+        <img src="./index/assets/images/resolveticket.gif" alt="intergr8 app demo">
       </article>
       <article class="gallery">
         <span class="gallery-title">App Of Empires</span>
